@@ -45,7 +45,7 @@ export async function POST(request: NextRequest){
 
      // 4) use of jwt for comparision
 
-   const token = jwt.sign(tokenData, process.env.TOKEN_SECRET!, { expiresIn: '1d' })
+   const token = jwt.sign(tokenData, 'ghfdffcgvhghd', { expiresIn: '1d' })
 
   const response = NextResponse.json({message: "logged in suscess",
     suscess:true
