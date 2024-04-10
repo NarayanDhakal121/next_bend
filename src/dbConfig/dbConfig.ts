@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 export async function connectDb(){
 
 try {
-   await mongoose.connect("mongodb+srv://narine:apple@cluster0.j5yuyfx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+   await mongoose.connect(process.env.MONGO_URI || '');
    const connection =  mongoose.connection
    connection.on('connected', () =>{
     console.log('MongoDB connected successfully')
